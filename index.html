@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add your existing CSS here -->
+    <style>
+        /* Notification Banner styles */
+        #notification {
+            display: none; /* Hidden initially */
+            position: fixed;
+            top: 0; /* Pop-up at the top of the page */
+            left: 0;
+            right: 0;
+            background-color: #28a745;
+            color: white;
+            padding: 16px 20px;
+            font-size: 18px;
+            text-align: center;
+            z-index: 9999;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        #notification a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #notification a:hover {
+            text-decoration: underline;
+        }
+
+        /* Close icon style */
+        .close-icon {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .close-icon:hover {
+            color: #ff6b6b;
+        }
+
+        /* Slide down animation */
+        @keyframes slideDown {
+            0% {
+                top: -100px;
+                opacity: 0;
+            }
+            100% {
+                top: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Notification Popup (Ad-style) -->
+    <div id="notification">
+        <span>
+            New update! Check out <a href="https://www.youtube.com/@ClarityMovieChannel-tv8kq" target="_blank">Clarity Movies</a>!
+        </span>
+        <span class="close-icon" onclick="closeNotification()">×</span>
+    </div>
+
+    <!-- Your Existing Website Content -->
+   
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to show and hide notification -->
+    <script>
+        // Function to show the notification (ad-style)
+        function showNotification() {
+            var notification = document.getElementById("notification");
+            notification.style.display = "block"; // Show the notification
+
+            // Hide the notification after 7 seconds
+            setTimeout(function() {
+                notification.style.display = "none";
+            }, 7000); // 7 seconds = 7000 milliseconds
+        }
+
+        // Function to close the notification manually
+        function closeNotification() {
+            var notification = document.getElementById("notification");
+            notification.style.display = "none";
+        }
+
+        // Show the notification when the page loads
+        window.onload = function() {
+            showNotification();
+        };
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Studios</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="path-to-your-favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!--test-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="testimonial.css"> <!-- Link to external CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Cool Font -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="form.css"> <!-- Link to external CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Cool Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="sharp.css"> 
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    
+    
+<!-- Fixed Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <a class="navbar-brand" href="#">
+        <img src="image/newlogo.jpeg" alt="Clarity Media Logo" class="logo rounded-circle">
+        Clarity Studios
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="new.html">Academy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#service">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://youtube.com/@claritytv4280?si=wjnXrFCCskflRmt5">clarity Movies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Background Video Section -->
+<div class="video-background">
+    <video autoplay loop muted>
+        <source src="video/clarity2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <div class="container text-center">
+            <h1 class="text-white">Welcome to Clarity Studios</h1>
+            <p class="lead text-white">Capturing Moments, Creating Stories</p>
+            
+            <button class="my-button">Explore &#8595</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Page content goes here -->
+
+<section class="about-us py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="image/about us.jpeg" alt="About Us Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2 class="font-weight-bold underline">About Us</h2>
+                <p class="small">At Clarity Studios, we believe in the power of storytelling. Founded by a team of passionate media professionals, we specialize in creating compelling visual content that resonates with audiences. Our mission is to transform ideas into engaging narratives that elevate brands and connect with people on a deeper level.
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services" class="py-5">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+            <h2 class="section-title">Our Services</h2>
+        </div>
+        
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4">
+                <div class="card service-card text-center p-4 shadow-sm">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i> <!-- FontAwesome icon for videography -->
+                    </div>
+                    <h5 class="card-title">Video Production</h5>
+                    <p class="card-text">At Clarity Media, we specialize in comprehensive video production services designed to elevate your brand and engage your audience </div>
+            </div>
+            
+            <!-- Service 2 --><div class="col-md-4">
+                <div class="card service-card text-center p-4 shadow-sm">
+                    <div class="service-icon">
+                        <i class="fas fa-television"></i> <!-- FontAwesome icon for music videos -->
+                    </div>
+                    <h5 class="card-title">Film & Television</h5>
+                    <p class="card-text">At Clarity Studio's', we are passionate about supporting film production through every phase of the creative process </div>
+            </div>
+            
+<!-- Service 2 --><div class="col-md-4">
+    <div class="card service-card text-center p-4 shadow-sm">
+        <div id="service" class="service-icon">
+            <i class="fas fa-briefcase"></i> <!-- FontAwesome icon for music videos -->
+        </div>
+        <h5 class="card-title">Documentaries</h5>
+        <p class="card-text"> At Clarity Studios, we are passionate about the art of documentary filmmaking. </div>
+</div>
+            
+            <!-- Service 2 --><div class="col-md-4">
+    <div class="card service-card text-center p-4 shadow-sm">
+        <div class="service-icon">
+            <i class="fas fa-television"></i> <!-- FontAwesome icon for music videos -->
+        </div>
+        <h5 class="card-title">Event&Livestream</h5>
+        <p class="card-text">Capture the essence of your events with our dedicated event videography services. We document everything from conferences and trade shows to weddings and celebrations, ensuring that every important moment is recorded beautifully for you to cherish and share.</div>
+        </div>
+<!-- Service 2 --><div class="col-md-4">
+    <div class="card service-card text-center p-4 shadow-sm">
+        <div class="service-icon">
+            <i class="fas fa-car"></i> <!-- FontAwesome icon for music videos -->
+        </div>
+        <h5 class="card-title">Film Distribution & Marketing</h5>
+        <p class="card-text">In the competitive landscape of filmmaking, effective marketing and distribution are crucial to ensure that your film reaches its intended audience and achieves commercial success. At Clarity Studio's', we  offered tailored strategies to maximize your film's visibility and impact.</div>
+        </div>
+</div>
+
+</div>
+        
+        
+</section>
+<div class="container text-center video-showcase">
+    <h2>Video Showcase</h2>
+    <div class="row video-container">
+        <div class="col-md-3">
+            <div class="video-item">
+                <video autoplay muted loop>
+                    <source src="video/CLARITY 1.mp4" type="video/mp4"> <!-- Replace with your video source -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="video-item">
+                <video autoplay muted loop>
+                    <source src="video/clarity2.mp4" type="video/mp4"> <!-- Replace with your video source -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="video-item">
+                <video autoplay muted loop>
+                    <source src="video/clarity 3.mp4" type="video/mp4"> <!-- Replace with your video source -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="video-item">
+                <video autoplay muted loop>
+                    <source src="video/clarity 4.mp4" type="video/mp4"> <!-- Replace with your video source -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<div class="container testimonials-section">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="testimonial">
+                    <p>" Clarity Studios did an amazing job capturing our wedding! The videos were beautiful and we couldn't be happier."</p>
+                    <h5>- Jane Doe</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <p>"Professional and creative! The team understood our vision perfectly. Highly recommend!"</p>
+                    <h5>- John Smith</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <p>"They made our corporate event unforgettable. The video was fantastic and the service was top-notch."</p>
+                    <h5>- Sarah Lee</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <p>"Great experience from start to finish. The quality of the video exceeded our expectations!"</p>
+                    <h5>- Michael Johnson</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <p>"Absolutely thrilled with the final product. They captured our family's memories perfectly!"</p>
+                    <h5>- Emily Davis</h5>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div id="contact" class="container contact-form">
+    <div class="text-center mb-4">
+        <i class="fas fa-camera fa-5x mb-3"></i> <!-- Larger Camera Icon -->
+        <h2>Contact Us</h2>
+        <p>We’d love to hear about your event!</p>
+    </div>
+    <form action="https://formspree.io/f/myzyzboj" method="POST">
+        
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name"name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email"name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone"name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="event">Event Type</label>
+            <select class="form-control" id="event" name="event" required>
+                <option value="">Select your event</option>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="graduation">Graduation</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div class="footer">
+    <h3>Clarity Studios</h3>
+    <p class="tagline">Work It</p>
+    <div class="brand-logos">
+        <img src="image/Google.png" alt="Brand 1" class="brand-logo"> <!-- Replace with actual logos -->
+        <img src="image/hollandia.png" alt="Brand 2" class="brand-logo">
+        <img src="image/netflix.png" alt="Brand 3" class="brand-logo">
+        <img src="image/iroko.png" alt="Brand 7" class="brand-logo">
+        <div class="i">
+<i>windflower</i> <br>
+<i>Bournvita,</i>   
+<i>action aid</i>
+<i>yellow brick road</i>
+        </div>    
+    </div>
+    <div>
+        <p>
+            <i class="fas fa-map-marker-alt location-icon"></i>
+            20B,DELEARA STREET,OFF IJEGUN ,IKOTUN ROAD LAGOS
+        </p>
+        <p>&copy; 2024 Clarity Studios. All Rights Reserved.</p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/claritystudios?mibextid=ZbWKwL" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.link/ucc3fn" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@claritytv4280?_t=8sc6XttJ92k&_r=1" class="social-icon" title="tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@claritytv4280?si=wjnXrFCCskflRmt5" class="social-icon" title="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/claritystudios1?igsh=ZGUzMzM3NWJiOQ==" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+<script>
+    // Close the navbar when a link is clicked
+    $(document).ready(function() {
+        $('.navbar-nav .nav-link').on('click', function() {
+            $('.navbar-collapse').collapse('hide');
+        });
+    });
+    
+
+
+        // Call the function to show notification
+        
+</script>
+
+</body>
+</html>

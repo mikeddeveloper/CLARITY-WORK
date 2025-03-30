@@ -1,0 +1,83 @@
+body {
+    padding-top: 56px; /* Space for fixed navbar */
+    background-color: #f8f9fa; /* Light background */
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+}
+
+.video-background {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.btn{
+    background-color: thistle;
+    border-color:thistle;
+}
+
+.btn-primary:hover {
+    background-color: thistle;
+    border-color: thistle;
+}
+
+
+.btn-thistle {
+    background-color: #f85ff8; /* Thistle color */
+
+            color:thistle; /* Text color */
+        }
+    .btn-thistle:hover {
+            background-color: #D3A8D3; /* Darker shade for hover effect */
+            color:thistle;
+        }
+        .my-button {
+            background-color: #f1c8f1; /* Darker thistle shade */
+
+            border: none; /* No border */
+            color: white; /* Text color */
+            padding: 15px 25px; /* Padding around the text */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Make it inline-block */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .my-button:hover {
+            background-color: lightcoral;
+        }

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Studio Academy</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding-bottom: 80px; /* Added space for phone sticker */
+        }
+        
+        /* Phone Call Sticker */
+        .phone-sticker {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+        .phone-sticker:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .phone-sticker i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .phone-number {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Rest of your existing styles... */
+        .academy-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        /* ... (all your other existing styles remain the same) ... */
+        .academy-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        h1 i {
+            margin-right: 10px;
+        }
+        ul {
+            margin-bottom: 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        #enrollBtn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+        #enrollBtn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+            border-top: 5px solid #007bff;
+        }
+        .testimonial-card {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        .student-image {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .student-name {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .student-testimonial {
+            font-style: italic;
+            color: #555;
+        }
+        
+        /* Gift Box Brochure Download */
+        .brochure-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px dashed #007bff;
+        }
+        .gift-box {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gift-box:hover {
+            transform: scale(1.05);
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .box-lid {
+            position: absolute;
+            width: 100%;
+            height: 40%;
+            background-color: #007bff;
+            border-radius: 5px 5px 0 0;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        .box-body {
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            top: 40%;
+            background-color: #0062cc;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .box-bow {
+            position: absolute;
+            width: 100%;
+            height: 15px;
+            background-color: #f8f9fa;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .box-bow::before,
+        .box-bow::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            top: -20px;
+        }
+        .box-bow::before {
+            left: 25px;
+        }
+        .box-bow::after {
+            right: 25px;
+        }
+        .shadow {
+            position: absolute;
+            width: 70%;
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            bottom: -10px;
+            left: 15%;
+            filter: blur(4px);
+        }
+        .gift-box.open .box-lid {
+            transform: rotateX(180deg) translateY(-40%);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+        .download-message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #28a745;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .show-message {
+            opacity: 1;
+        }
+        .download-instruction {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .download-link {
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Phone Call Sticker - REPLACE THE PHONE NUMBER BELOW -->
+    <a href="tel:+2348123456789" class="phone-sticker">
+        <i class="fas fa-phone-alt"></i>
+        <span class="phone-number">+2349131887161</span>
+    </a>
+
+  
+        <!-- ... (rest of your content remains exactly the same) ... -->
+        <div class="academy-section">
+            <h1>
+                <i class="fas fa-video"></i> Unlock Your Potential at Clarity Studio Film & Television Academy
+            </h1>
+            <p>Clarity Studios Film and Television Academy is a premier film and production institution dedicated to equipping aspiring filmmakers and production enthusiasts with industry expertise. Through hands-on training and mentorship from seasoned professionals, our students gain practical skills to succeed in the film and television industry.</p>
+            
+            <h2>Our Courses</h2>
+            <ul>
+                <li><strong>Introduction to Videography</strong>: Grasp the essentials of camera operation, composition, and lighting to create visually stunning content.</li>
+                <li><strong>Advanced Editing Techniques</strong>: Delve into the world of editing software, focusing on narrative flow and advanced visual storytelling techniques.</li>
+                <li><strong>Creative Direction</strong>: Learn the art of directing, from script development to managing production teams, bringing your vision to life.</li>
+            </ul>
+    
+            <h2>Why Choose Clarity Studio Academy?</h2>
+            <ul>
+                <li><strong>Expert Instructors</strong>: Learn from seasoned professionals with extensive industry experience and insights.</li>
+                <li><strong>Hands-On Learning</strong>: Engage in interactive workshops and real-world projects that prepare you for the competitive landscape of videography.</li>
+                <li><strong>Community and Networking</strong>: Join a dynamic community of creatives, fostering collaboration and networking opportunities with fellow aspiring filmmakers.</li>
+            </ul>
+        </div>
+    
+    
+        <div class="brochure-section">
+            <h3><i class="fas fa-file-pdf text-danger"></i> Download Our Course Brochure</h3>
+            <p>Click the gift box below to get our complete program details</p>
+            
+            <div class="gift-box" id="giftBox">
+                <div class="box">
+                    <div class="box-lid">
+                        <div class="box-bow"></div>
+                    </div>
+                    <div class="box-body"></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+            
+            <div class="download-message" id="downloadMessage">
+                <i class="fas fa-check-circle"></i> Downloading brochure...
+            </div>
+            
+            <p class="download-instruction">
+                If download doesn't start automatically, 
+                <span class="download-link" id="manualDownload">click here</span>
+            </p>
+        </div>
+    <!-- Rest of your HTML content remains unchanged -->
+    <div class="container testimonial-section">
+        <h2 class="text-center mb-5">What Our Students Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card testimonial-card text-center">
+                    <img src="image/lere.jpeg" alt="Lere Olarenwaju" class="student-image">
+                    <p class="student-testimonial">"This course changed my life! The instructors were amazing and the content was incredibly valuable."</p>
+                    <div class="student-name">Lere Olarenwaju</div>
+                    <p>past student (2022)</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card testimonial-card text-center">
+                    <img src="image/kenny.jpeg" alt="Kehinde Awopetu" class="student-image">
+                    <p class="student-testimonial">"I learned so much about Post Production techniques. I feel confident in my skills now!"</p>
+                    <div class="student-name">Kehinde Awopetu</div>
+                    <p>past student (2022)</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card testimonial-card text-center">
+                    <img src="image/david.jpeg" alt="Adeteso David" class="student-image">
+                    <p class="student-testimonial">"The hands-on approach made all the difference. I can't recommend this program enough!"</p>
+                    <div class="student-name">Adeteso David</div>
+                    <p>past student (2024)</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center mt-5">Take the Next Step!</h2>
+        <p class="text-center">Are you ready to turn your passion for videography into a rewarding career?</p>
+        <a href="form.html" class="d-block text-center">
+            <button id="enrollBtn">Sign Up Now</button>
+        </a>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftBox = document.getElementById('giftBox');
+            const downloadMessage = document.getElementById('downloadMessage');
+            const manualDownload = document.getElementById('manualDownload');
+            
+            // PDF Configuration - UPDATE THIS WITH YOUR PDF PATH
+            const pdfConfig = {
+                url: 'bronchure.pdf', // Path to your PDF file
+                filename: 'Clarity-Studio-Academy-Brochure.pdf' // Suggested filename
+            };
+            
+            function downloadPDF() {
+                // Create invisible download link
+                const link = document.createElement('a');
+                link.href = pdfConfig.url;
+                link.download = pdfConfig.filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Show success message
+                downloadMessage.classList.add('show-message');
+            }
+            
+            // Main gift box click handler
+            giftBox.addEventListener('click', function() {
+                this.classList.add('open');
+                setTimeout(downloadPDF, 300);
+                
+                // Reset after 4 seconds
+                setTimeout(() => {
+                    this.classList.remove('open');
+                    setTimeout(() => {
+                        downloadMessage.classList.remove('show-message');
+                    }, 3000);
+                }, 4000);
+            });
+            
+            // Manual download option
+            manualDownload.addEventListener('click', downloadPDF);
+            
+            // Hover effects
+            giftBox.addEventListener('mouseenter', function() {
+                this.classList.add('pulse');
+            });
+            
+            giftBox.addEventListener('mouseleave', function() {
+                this.classList.remove('pulse');
+            });
+        });
+    </script>
+</body>
+</html>
